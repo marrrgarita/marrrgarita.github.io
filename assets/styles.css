@@ -1,0 +1,231 @@
+ /*http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+/*
+/*
+
+
+  /*
+    ========================================
+    Typography
+
+    Downloaded font families:
+    font-family: 'Satisfy', cursive;
+    font-family: 'Roboto', sans-serif;
+    ========================================
+  */
+  body, html {
+    height: 100%;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    color: #333d3c;
+  }
+  body p {
+    line-height: 1.65;
+  }
+
+  /* ========================================
+  MAIN LANDING
+  ==========================================*/
+
+.main-top {
+  position: absolute;
+  width:100%;
+  height:100%;
+  background: #135058;
+  background: -webkit-linear-gradient(to top, #135058, #F1F2B5);
+  background: -moz-linear-gradient(to top, #135058, #F1F2B5);
+  background: linear-gradient(to top, #135058, #F1F2B5);
+  background: linear-gradient(45deg, #135058, #0dc4d8, #F1F2B5);
+  background-size: 600% 600%;
+  -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite;
+}
+
+
+@-webkit-keyframes Gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+@-moz-keyframes Gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+@keyframes Gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
+.main-logo {
+  display: block;
+  max-width: 400px;
+  max-height: 600px;
+  padding: 2em;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.main-logo img {
+  width: 100%;
+}
+
+.main-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+
+.main-nav-buttons a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4em;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fffff0;
+  padding: .5em;
+}
+
+.main-nav-buttons a:hover {
+  border-bottom: 3px solid #fffff0;
+}
+
+/* ========================================
+ABOUT section
+========================================*/
+
+.about-section {
+  position:absolute;
+     width:100%;
+     top:100%;
+}
+
+.about-container {
+  width: 75%;
+  margin: 6em auto;
+}
+
+.about-content {
+  display: inline-block;
+  width: 75%;
+}
+
+.about-content h1 {
+  font-size: 5em;
+  font-family: "Satisfy", cursive;
+  margin-bottom: 4%;
+  color: #aae0d2;
+}
+
+.profile-image {
+  width: 20%;
+  margin-left: 3%;
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+}
+
+.profile-image img {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+
+.about-skills h2 {
+  font-size: 2em;
+  color: #aae0d2;
+  margin: 1.5em 0;
+  padding-bottom: .5em;
+  border-bottom: 2px solid #edf1b6;
+  text-transform: uppercase;
+}
+
+.about-skills h2:hover {
+  cursor: pointer;
+}
+
+.skill-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skill-icons img {
+  width: 6%;
+  height: 6%;
+  opacity: 90%;
+}
+
+/* ========================================
+WORK section
+========================================*/
+
+.work-section {
+  position: absolute;
+  top: 200%;
+  background-color: #aae0d2;
+}
