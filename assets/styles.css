@@ -93,7 +93,7 @@ a {
   background: -webkit-linear-gradient(to top, #135058, #F1F2B5);
   background: -moz-linear-gradient(to top, #135058, #F1F2B5);
   background: linear-gradient(to top, #135058, #F1F2B5);
-  background: linear-gradient(45deg, #0f9bab, #F1F2B5);
+  background: linear-gradient(45deg, #0f9bab, #fffff0);
   background-size: 500% 500%;
   -webkit-animation: Gradient 6.5s ease infinite;
   -moz-animation: Gradient 6.5s ease infinite;
