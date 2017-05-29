@@ -95,9 +95,9 @@ a {
   background: linear-gradient(to top, #135058, #F1F2B5);
   background: linear-gradient(45deg, #135058, #0dc4d8, #F1F2B5);
   background-size: 500% 500%;
-  -webkit-animation: Gradient 8s ease infinite;
-  -moz-animation: Gradient 8s ease infinite;
-  animation: Gradient 8s ease infinite;
+  -webkit-animation: Gradient 6.5s ease infinite;
+  -moz-animation: Gradient 6.5s ease infinite;
+  animation: Gradient 6.5s ease infinite;
 }
 
 

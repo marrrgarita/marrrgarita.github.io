@@ -34,7 +34,7 @@ $(document).ready(function() {
     $("#skill-show i").toggleClass('fa-caret-down fa-caret-up');
   });
 
- //
+ // 
  // $('#rendezyou').on('mouseenter', function(){
  //   $('#rendezyou').attr("src", "assets/margarita.jpg");
  // })
