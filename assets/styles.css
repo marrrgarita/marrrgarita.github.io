@@ -76,6 +76,11 @@ table {
     line-height: 1.65;
   }
 
+a {
+    color: #333d3c;
+    text-decoration: none;
+  }
+
   /* ========================================
   MAIN LANDING
   ==========================================*/
@@ -166,6 +171,7 @@ ABOUT section
 
 .about-container {
   width: 75%;
+  height: 75%;
   margin: 6em auto;
 }
 
@@ -215,7 +221,7 @@ ABOUT section
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: 0 auto;
+  margin: 3% auto;
 }
 
 .skill-icons img {
@@ -224,10 +230,7 @@ ABOUT section
   opacity: 90%;
 }
 
-.about-content a {
-  color: #333d3c;
-  text-decoration: none;
-}
+
 
 .about-content a:hover {
   color: #aae0d2;
@@ -260,4 +263,52 @@ WORK section
   width: 40%;
   float: left;
   margin-right: 5%;
+}
+
+
+#rendezyou:hover {
+  filter: grayscale(100%);
+}
+
+/* ========================================
+CONTACT section
+========================================*/
+
+.contact-section {
+  position: absolute;
+  top: 200%;
+  background-color: #aae0d2;
+  height: 90vh;
+  width: 100%;
+}
+
+.contact-content {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.contact-content h1 {
+  font-size: 5em;
+  font-family: "Satisfy", cursive;
+  margin: 4% 0;
+  text-align: right;
+  padding-bottom: 2%;
+}
+
+.contact-type {
+  width: 50%;
+}
+
+.contact-type i {
+  font-size: 2.5em;
+  color: #edf1b6;
+  margin: 1% 4%;
+  text-align: left;
+}
+
+.contact-type a,
+.contact-type h2 {
+  color: white;
+  text-align: right;
+  font-size: 1.25rem;
 }

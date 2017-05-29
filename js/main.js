@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   clickMainLinks(aboutLink, aboutElement);
   clickMainLinks(workLink, workElement);
-  clickMainLinks(contactLink, contactElement)
+  clickMainLinks(contactLink, contactElement);
 
   //hide elements that should be hidden
   $('.skill-icons').hide();
@@ -34,7 +34,7 @@ $(document).ready(function() {
     $("#skill-show i").toggleClass('fa-caret-down fa-caret-up');
   });
 
- // 
+ //
  // $('#rendezyou').on('mouseenter', function(){
  //   $('#rendezyou').attr("src", "assets/margarita.jpg");
  // })
