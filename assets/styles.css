@@ -89,10 +89,10 @@ table {
   background: -moz-linear-gradient(to top, #135058, #F1F2B5);
   background: linear-gradient(to top, #135058, #F1F2B5);
   background: linear-gradient(45deg, #135058, #0dc4d8, #F1F2B5);
-  background-size: 600% 600%;
-  -webkit-animation: Gradient 10s ease infinite;
-  -moz-animation: Gradient 10s ease infinite;
-  animation: Gradient 10s ease infinite;
+  background-size: 500% 500%;
+  -webkit-animation: Gradient 8s ease infinite;
+  -moz-animation: Gradient 8s ease infinite;
+  animation: Gradient 8s ease infinite;
 }
 
 
@@ -150,7 +150,11 @@ table {
   border-bottom: 3px solid #fffff0;
 }
 
-/* ========================================
+#coming-soon {
+  font-family: 'Satisfy', cursive;
+}
+
+/* ========================================``
 ABOUT section
 ========================================*/
 
@@ -215,9 +219,19 @@ ABOUT section
 }
 
 .skill-icons img {
-  width: 6%;
-  height: 6%;
+  width: 8%;
+  height: 8%;
   opacity: 90%;
+}
+
+.about-content a {
+  color: #333d3c;
+  text-decoration: none;
+}
+
+.about-content a:hover {
+  color: #aae0d2;
+  background-color: #333d3c;
 }
 
 /* ========================================
@@ -228,4 +242,22 @@ WORK section
   position: absolute;
   top: 200%;
   background-color: #aae0d2;
+  height: 90vh;
+}
+
+.project-snapshots {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.project-snapshots h1 {
+  font-size: 5em;
+  font-family: "Satisfy", cursive;
+  margin: 4% 0;
+}
+
+#rendezyou {
+  width: 40%;
+  float: left;
+  margin-right: 5%;
 }
