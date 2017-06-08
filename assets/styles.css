@@ -244,7 +244,7 @@ WORK section
 .work-section {
   position: absolute;
   top: 200%;
-  height: 150vh;
+  height: 120vh;
   background-color: #aae0d2;
 }
 
@@ -259,18 +259,21 @@ WORK section
 .project-snapshots h1 {
   font-size: 5em;
   font-family: "Satisfy", cursive;
-  margin: 4% 0;
+  margin-top: 8%;
+  color: #edf1b6;
 }
 
 #rendezyou {
   width: 100%;
   display: block;
   margin: 3% auto 8% auto;
+  filter: grayscale(100%);
 }
 
 
 #rendezyou:hover {
-  filter: grayscale(100%);
+  filter: none;
+  cursor: pointer;
 }
 
 /* ========================================
@@ -279,7 +282,7 @@ CONTACT section
 
 .contact-section {
   position: absolute;
-  top: 350%;
+  top: 320%;
   background-color: #f4f7cf;
   height: 100vh;
   width: 100%;
