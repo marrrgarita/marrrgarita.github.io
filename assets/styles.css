@@ -73,7 +73,7 @@ table {
     color: #333d3c;
   }
   body p {
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
 a {
@@ -244,7 +244,7 @@ WORK section
 .work-section {
   position: absolute;
   top: 200%;
-  height: 130vh;
+  height: 120vh;
   background-color: #aae0d2;
 }
 
@@ -259,8 +259,12 @@ WORK section
 .project-snapshots h1 {
   font-size: 5em;
   font-family: "Satisfy", cursive;
-  margin-top: 8%;
+  margin-top: 5%;
   color: #edf1b6;
+}
+
+.project-description a {
+  font-size: 1.1em;
 }
 
 .project-description a:hover {
@@ -269,18 +273,27 @@ WORK section
 }
 
 .project-description p {
-  padding-bottom: 3%;
+  padding-bottom: 2%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.project-description i {
+  color: #edf1b6;
+  font-size: 2em;
 }
 
 .built {
   font-family: "Satisfy", cursive;
-  font-size: 1.1em;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-left: .5%;
 }
 
 #rendezyou {
-  width: 100%;
+  width: 80%;
   display: block;
-  margin: 3% auto 8% auto;
+  margin: 3% auto;
   filter: grayscale(100%);
 }
 
@@ -296,7 +309,7 @@ CONTACT section
 
 .contact-section {
   position: absolute;
-  top: 330%;
+  top: 320%;
   background-color: #f4f7cf;
   height: 100vh;
   width: 100%;
