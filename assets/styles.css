@@ -73,7 +73,7 @@ table {
     color: #333d3c;
   }
   body p {
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
 a {
@@ -152,7 +152,7 @@ a {
 }
 
 .main-nav-buttons a:hover {
-  border-bottom: 3px solid #fffff0;
+  border-bottom: 5px solid #fffff0;
 }
 
 #coming-soon {
@@ -244,30 +244,63 @@ WORK section
 .work-section {
   position: absolute;
   top: 200%;
+  height: 120vh;
   background-color: #aae0d2;
-  height: 90vh;
 }
 
 .project-snapshots {
   width: 75%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .project-snapshots h1 {
   font-size: 5em;
   font-family: "Satisfy", cursive;
-  margin: 4% 0;
+  margin-top: 5%;
+  color: #edf1b6;
+}
+
+.project-description a {
+  font-size: 1.1em;
+}
+
+.project-description a:hover {
+  cursor: pointer;
+  color: #edf1b6;
+}
+
+.project-description p {
+  padding-bottom: 2%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.project-description i {
+  color: #edf1b6;
+  font-size: 2em;
+}
+
+.built {
+  font-family: "Satisfy", cursive;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-left: .5%;
 }
 
 #rendezyou {
-  width: 40%;
-  float: left;
-  margin-right: 5%;
+  width: 80%;
+  display: block;
+  margin: 3% auto;
+  filter: grayscale(100%);
 }
 
 
 #rendezyou:hover {
-  filter: grayscale(100%);
+  filter: none;
+  cursor: pointer;
 }
 
 /* ========================================
@@ -276,9 +309,9 @@ CONTACT section
 
 .contact-section {
   position: absolute;
-  top: 200%;
-  background-color: #aae0d2;
-  height: 90vh;
+  top: 320%;
+  background-color: #f4f7cf;
+  height: 100vh;
   width: 100%;
 }
 
@@ -290,7 +323,7 @@ CONTACT section
 .contact-content h1 {
   font-size: 5em;
   font-family: "Satisfy", cursive;
-  margin: 4% 0;
+  margin-top: 8%;
   text-align: right;
   padding-bottom: 2%;
 }
@@ -301,14 +334,18 @@ CONTACT section
 
 .contact-type i {
   font-size: 2.5em;
-  color: #edf1b6;
+  color: #aae0d2;
   margin: 1% 4%;
   text-align: left;
 }
 
 .contact-type a,
 .contact-type h2 {
-  color: white;
+  color: lightslategrey;
   text-align: right;
   font-size: 1.25rem;
+}
+
+.contact-type h2 > a:hover {
+  color: #aae0d2;
 }
