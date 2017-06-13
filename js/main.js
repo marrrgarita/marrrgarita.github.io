@@ -28,6 +28,9 @@ $(document).ready(function() {
   var contactLink    = $('#contact-link');
   var contactElement = $('#contact');
 
+  var topLink = $('#back-to-top');
+  var topElement = $('#main-top');
+
 
   function clickMainLinks(link, someElement) {
     link.on('click', function(e){
@@ -40,6 +43,7 @@ $(document).ready(function() {
   clickMainLinks(aboutLink, aboutElement);
   clickMainLinks(workLink, workElement);
   clickMainLinks(contactLink, contactElement);
+  clickMainLinks(topLink, topElement);
 
   //hide elements that should be hidden
   $('.skill-icons').hide();
