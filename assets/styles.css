@@ -251,10 +251,14 @@ WORK section
 .project-snapshots {
   width: 75%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
+
+.project-container {
+  margin-top: 2%;
+  overflow: auto;
+  padding-bottom: 2%;
+}
+
 
 .project-snapshots h1 {
   font-size: 5em;
@@ -263,25 +267,42 @@ WORK section
   color: #edf1b6;
 }
 
+.project-image {
+  width: 40%;
+  display: inline-block;
+  float: left;
+}
+
+.project-description {
+  width: 55%;
+  display: inline-block;
+  margin-left: 4%;
+}
+
+.project-image a,
 .project-description a {
   font-size: 1.1em;
 }
 
+.project-image a:hover,
 .project-description a:hover {
   cursor: pointer;
   color: #edf1b6;
 }
 
-.project-description p {
-  padding-bottom: 2%;
-  width: 80%;
-  margin: 0 auto;
-}
-
+.project-image i,
 .project-description i {
   color: #edf1b6;
   font-size: 2em;
 }
+.project-description p {
+  padding-bottom: 2%;
+  margin: 0 auto;
+}
+
+
+
+
 
 .built {
   font-family: "Satisfy", cursive;
@@ -290,17 +311,18 @@ WORK section
   margin-left: .5%;
 }
 
-#rendezyou {
-  width: 80%;
+
+.left-image {
+  width: 100%;
   display: block;
-  margin: 3% auto;
-  filter: grayscale(100%);
+  filter: none;
 }
 
 
-#rendezyou:hover {
-  filter: none;
+.left-image:hover {
+  filter: grayscale(100%) blur(2px);
   cursor: pointer;
+
 }
 
 /* ========================================

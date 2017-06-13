@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+</head>
+<body id="page-body">
+
+<!-- ANALOG CLOCK -->
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="number one">1</div>
+        <div class="number two">2</div>
+        <div class="number three">3</div>
+        <div class="number four">4</div>
+        <div class="number five">5</div>
+        <div class="number six">6</div>
+        <div class="number seven">7</div>
+        <div class="number eight">8</div>
+        <div class="number nine">9</div>
+        <div class="number ten">10</div>
+        <div class="number eleven">11</div>
+        <div class="number twelve">12</div>
+
+      </div>
+    </div>
+
+    <div class="buttons">
+      <a href="#" id="digital-switch"><span class="digital-switch">digital</span></a>
+    </div>
+
+<!-- DIGITAL CLOCK -->
+
+    <div class="digital-clock">
+        <div class="digit hour-display"></div>
+        <div class="digit min-display"></div>
+        <div class="digit second-display"></div>
+    </div>
+
+
+
+
+  <style>
+    html {
+      background:#018DED url('assets/hawaiianbg.jpg');
+      background-size:cover;
+      font-family:'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+
+
+    body {
+      background: rgba(0, 0, 0, 0.2);
+      margin: 0;
+      font-size: 2rem;
+      display:flex;
+      flex:1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .number {
+
+      width: 4rem;
+      font-size: 4rem;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      margin: -2rem;
+      text-align: center;
+    }
+
+    .one {
+      transform: rotate(300deg) translate(25rem) rotate(-300deg);
+    }
+
+    .two {
+      transform: rotate(330deg) translate(25rem) rotate(-330deg);
+    }
+
+    .three {
+      transform: rotate(0deg) translate(25rem) rotate(0deg);
+    }
+
+    .four {
+      transform: rotate(30deg) translate(25rem) rotate(-30deg);
+    }
+
+    .five {
+      transform: rotate(60deg) translate(25rem) rotate(-60deg);
+    }
+
+    .six {
+      transform: rotate(90deg) translate(25rem) rotate(-90deg);
+    }
+
+    .seven {
+      transform: rotate(120deg) translate(25rem) rotate(-120deg);
+    }
+
+    .eight {
+      transform: rotate(150deg) translate(25rem) rotate(-150deg);
+    }
+
+    .nine {
+      transform: rotate(180deg) translate(25rem) rotate(-180deg);
+    }
+
+    .ten {
+      transform: rotate(210deg) translate(25rem) rotate(-210deg);
+    }
+
+    .eleven {
+      transform: rotate(240deg) translate(25rem) rotate(-240deg);
+    }
+
+    .twelve {
+      transform: rotate(270deg) translate(25rem) rotate(-270deg);
+    }
+
+    .clock {
+      width: 50rem;
+      height: 50rem;
+      border:20px solid white;
+      border-radius:50%;
+      margin:50px auto;
+      position: relative;
+      padding:2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+      text-align: right;
+    }
+
+    .hand {
+      z-index: 100000;
+      width:50%;
+      height:6px;
+      background: white;
+      position: absolute;
+      top:50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+
+    .hand.hour-hand {
+      width: 40%;
+      left: 10%;
+    }
+
+    .hand.min-hand {
+      width: 45%;
+      left: 5%;
+    }
+
+    .hand.second-hand {
+      opacity: 0.5;
+    }
+
+    .buttons {
+      position: absolute;
+      left: 15%;
+    }
+
+    #digital-switch {
+      color: white;
+      text-decoration: none;
+      padding: 3rem;
+      border: 2px solid white;
+    }
+
+    /*DIGITAL CLOCK STYLES*/
+
+    .digital-clock {
+      display: none;
+      width: 50rem;
+      height: 20rem;
+      border:20px solid white;
+      margin:50px auto;
+      position: relative;
+      padding:2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+
+    .digit {
+      display: inline-block;
+      font-size: 6em;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    .digit.second-display {
+      opacity: 0.75;
+    }
+
+
+  </style>
+
+  <script>
+  const toggleButton = document.querySelector('#digital-switch');
+  const analogClock  = document.querySelector('.clock');
+  const digitalClock = document.querySelector('.digital-clock');
+
+  var clicks = 1;
+
+  toggleButton.addEventListener('click', function(){
+    if (clicks % 2 === 0) {
+      analogClock.style.display = 'block'
+      digitalClock.style.display = 'none'
+      toggleButton.innerText = 'digital'
+    } else {
+      analogClock.style.display = 'none'
+      digitalClock.style.display = 'block'
+      toggleButton.innerHTML = 'analog'
+    }
+    clicks ++;
+  });
+
+
+
+  const secondHand = document.querySelector('.second-hand');
+  const minuteHand = document.querySelector('.min-hand');
+  const hourHand   = document.querySelector('.hour-hand');
+
+    function setDate() {
+      const now = new Date();
+
+      const seconds = now.getSeconds();
+      const secondsDegrees = ((seconds / 60) * 360) + 90;
+      secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+      const mins = now.getMinutes();
+      const minsDegrees = ((mins / 60) * 360) + 90;
+      minuteHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+      const hours = now.getHours();
+      const hoursDegrees = ((hours / 60) * 360) + 150;
+      hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+
+    }
+
+  const secondDisplay = document.querySelector('.second-display');
+  const minuteDisplay = document.querySelector('.min-display');
+  const hourDisplay   = document.querySelector('.hour-display');
+
+
+    function setDigitalDate() {
+      const now = new Date();
+
+      const seconds = now.getSeconds();
+      if (seconds < 10) {
+        secondDisplay.innerHTML = `:0${seconds}`
+      } else {
+        secondDisplay.innerHTML = `:${seconds}`;
+      }
+
+      const mins = now.getMinutes();
+      if (mins < 10) {
+        minuteDisplay.innerHTML = `:0${mins}`
+      } else {
+        minuteDisplay.innerHTML = `:${mins}`;
+      }
+
+      const hours = now.getHours();
+      hourDisplay.innerHTML = hours;
+
+    }
+
+    setInterval(setDigitalDate, 1000);
+
+    setInterval(setDate, 1000);
+
+  </script>
+</body>
+</html>
