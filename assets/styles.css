@@ -141,7 +141,8 @@ a {
   margin-top: 3em;
 }
 
-.main-nav-buttons a {
+.main-nav-buttons a,
+#back-to-top {
   font-family: 'Roboto', sans-serif;
   font-size: 1.4em;
   display: inline-block;
@@ -149,6 +150,14 @@ a {
   text-decoration: none;
   color: #fffff0;
   padding: .5em;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 2em;
+  color: #333d3c;
 }
 
 .main-nav-buttons a:hover {
