@@ -222,14 +222,14 @@ ABOUT section
   text-transform: uppercase;
 }
 
-.about-skills h2:hover {
+/*.about-skills h2:hover {
   cursor: pointer;
-}
+}*/
 
 .skill-icons {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   margin: 3% auto;
 }
 

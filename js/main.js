@@ -31,6 +31,8 @@ $(document).ready(function() {
   var topLink = $('#back-to-top');
   var topElement = $('#main-top');
 
+  var embeddedContactLink = $('#embedded-content-link');
+
 
   function clickMainLinks(link, someElement) {
     link.on('click', function(e){
@@ -43,17 +45,18 @@ $(document).ready(function() {
   clickMainLinks(aboutLink, aboutElement);
   clickMainLinks(workLink, workElement);
   clickMainLinks(contactLink, contactElement);
+  clickMainLinks(embeddedContactLink, contactElement);
   clickMainLinks(topLink, topElement);
 
   //hide elements that should be hidden
-  $('.skill-icons').hide();
+  // $('.skill-icons').hide();
 
   //toggle hidden divs
 
-  $('#skill-show').on('click', function(){
-    $(".skill-icons").toggle(500);
-    $("#skill-show i").toggleClass('fa-caret-down fa-caret-up');
-  });
+  // $('#skill-show').on('click', function(){
+  //   $(".skill-icons").toggle(500);
+  //   $("#skill-show i").toggleClass('fa-caret-down fa-caret-up');
+  // });
 
  //
  // $('#rendezyou').on('mouseenter', function(){
